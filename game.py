@@ -30,40 +30,44 @@ while not won:
 
     cross = not cross
 
-    if row1[0] == row1[1] and row1[2] and not ' ':
+    if row1[0] == row1[1] == row1[2]:
         won = True
         winner = row1[0]
-        print('bug 28')
+        print('running 36')
 
-    elif row2[0] == row2[1] and row2[2] and not ' ':
+    if row2[0] == row2[1] == row2[2]:
         won = True
         winner = row2[0]
-        print('bug 32')
+        print('running 41')
 
-    elif row3[0] == row3[1] and row3[2] and not ' ':
+    if row3[0] == row3[1] == row3[2]:
         won = True
         winner = row3[0]
-        print('bug 36')
+        print('running 46')
 
     for i in range(3):
-        if row1[i-1] == row2[i-1] and row3[i-1] and not ' ':
+        if row1[i-1] == row2[i-1] == row3[i-1]:
              won = True
              winner = row1[i-1]
-             print('bug 41')
+             print('running 52')
 
-    if row1[0] == row2[1] and row3[2] and not ' ':
+    if row1[0] == row2[1] == row3[2]:
         won = True
         winner = row1[0]
-        print('bug 45')
+        print('running 57')
+        print
 
-    elif row1[2] == row2[1] and row3[0] and not ' ':
+    elif row1[2] == row2[1] == row3[0]:
         won = True
         winner = row3[0]
-        print('bug 49')
+        print('running 63')
 
     if counter == 9:
         won = True
         winner = 'tie'
+
+    if winner == ' ':
+        won = False
 
 print(str(row1)+"\n"+str(row2)+"\n"+str(row3))
 if winner != 'tie':
